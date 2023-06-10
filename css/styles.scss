@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+section{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 100px 0;
+  background: linear-gradient(to bottom, #b830a3, #ff606e);
+  header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 100px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+      img{
+        max-width: 100px;
+      }
+    }
+    .toggle{
+      width: 30px;
+      height: 30px;
+      background: url(../img/menu.png) no-repeat center/cover;
+      background-size: 30px;
+      cursor: pointer;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .content{
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    .imgBx{
+      position:relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      img{
+        max-width: 100%;
+        animation: animatedShoes 4s linear infinite;
+      }
+    }
+    .text{
+      max-width: 700px;
+      margin-top: 20px;
+      h2{
+        font-size: 2.5em;
+        color: #fff;
+        font-weight: 800;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      p{
+        color: #fff;
+      }
+      a{
+        display: inline-block;
+        padding: 10px 30px;
+        color: #111;
+        background: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin-top: 15px;
+      }
+    }
+  }
+  &::before{
+    content: "ZOOMX";
+    font-size: 20vw;
+    position: absolute;
+    color: #0001;
+    display: flex;
+    font-weight: 900;
+    padding-top: 20vh;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  header{
+    padding: 10px  40px;
+  }
+  section{
+    padding: 40px 40px 0;
+    overflow: hidden;
+
+  }
+}
