@@ -86,13 +86,70 @@ section{
     align-items: center;
   }
 }
+.sci{
+  position: absolute;
+  bottom: 30px;
+  right: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  li{
+    list-style: none;
+    a{
+      display: block;
+      color: #fff;
+      cursor: pointer;
+      &:hover{
+        transform: scale(1.5);
+        transition: 0.6s;
+        color: #000;
+      }
+      
+
+    }
+  }
+}
 @media (max-width: 600px) {
   header{
-    padding: 10px  40px;
+    padding: 20px  40px;
   }
   section{
     padding: 40px 40px 0;
     overflow: hidden;
+    &::before{
+      font-size: 20vh;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .content{
+    margin-top: 120px; // check
+    .imgBx{
+      margin-top: 65px;
+    }
+  }
+  .sci{
+    position: relative;
+    justify-content: flex-end;
+    flex-direction: row;
+    bottom: 30px;
+    right: inherit;
+    li{
+      margin-right: 20px;
+      font-size: 1.6em;
+    }
+  }
+}
 
+@keyframes animatedShoes {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.13);
+  }
+  100%{
+    transform: scale(1);
   }
 }
